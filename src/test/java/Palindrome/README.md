@@ -75,3 +75,44 @@ false
 > java -jar target/k-coding-practice.jar palindrome "A man, a plan, a canal: Panama"
 
 true
+
+> java -jar target/k-coding-practice.jar palindrome level
+
+true
+
+> java -jar target/k-coding-practice.jar palindrome abba
+
+true
+
+> java -jar target/k-coding-practice.jar palindrome abc
+
+false
+
+> java -jar target/k-coding-practice.jar palindrome "No 'x' in Nixon"
+
+true
+
+Examples
+
+| Input | Result | Notes |
+|-------|--------|-------|
+| racecar | true | Odd-length palindrome |
+| level | true | Odd-length palindrome |
+| abba | true | Even-length palindrome |
+| a | true | Single character |
+| abc | false | Not the same forwards and backwards |
+| hello | false | h != o |
+| Racecar | true | Case ignored |
+| A man, a plan, a canal: Panama | true | Spaces and punctuation ignored |
+| No 'x' in Nixon | true | Spaces and punctuation ignored |
+| hello world | false | Not a palindrome when letters are compared |
+
+Visual example for "racecar":
+
+```
+r a c e c a r
+↑           ↑  r == r
+  ↑       ↑    a == a
+    ↑   ↑      c == c
+      ↑        e (middle)
+```

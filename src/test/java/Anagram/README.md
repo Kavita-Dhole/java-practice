@@ -66,3 +66,39 @@ true
 > java -jar target/k-coding-practice.jar anagram hello world
 
 false
+
+> java -jar target/k-coding-practice.jar anagram evil vile
+
+true
+
+> java -jar target/k-coding-practice.jar anagram cat act
+
+true
+
+> java -jar target/k-coding-practice.jar anagram Listen Silent
+
+true
+
+> java -jar target/k-coding-practice.jar anagram rat car
+
+false
+
+Examples
+
+| Word 1 | Word 2 | Result | Explanation |
+|--------|--------|--------|-------------|
+| listen | silent | true | Same letters: e, i, l, n, s, t |
+| evil | vile | true | Same letters rearranged |
+| cat | act | true | Same 3 letters |
+| rat | tar | true | Same 3 letters |
+| hello | world | false | Different letters |
+| rat | car | false | Different letter counts |
+| abc | ab | false | Different lengths |
+
+Case-insensitive examples:
+
+| Word 1 | Word 2 | Result |
+|--------|--------|--------|
+| Listen | Silent | true |
+| ANGEL | glean | true |
+| School | LOOCHS | true |
